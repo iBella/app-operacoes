@@ -1,38 +1,106 @@
 .App {
-  text-align: center;
+  text-align: justify;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.alerta {
+  width: 100%;
+  padding-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-mais {
+  text-align: end;
+  position: relative;
+  margin-top: -1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn-mais-fim {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align-last: end;
+  right: 0;
+  margin-right: 50px;
+}
+
+.card-ce {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.card-grafico {
+  text-align: center;
+  padding: 0px;
+  width: 580px;
+  height: 440px;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-grafico-conteudo {
+  text-align: center;
+  width: 540px;
+  height: 310px;
+  padding: 0px;
+  margin: auto;
+}
+
+.card-valor {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
+  padding: 0px;
+  width: 210px;
+  height: 180px;
+  margin-top: 20px;
+}
+
+.frase-agil {
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.form-text {
+  width: 100%;
+  margin-top: 25px !important;
+}
+
+.painel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.select-opcao {
+  padding: 2px;
+  width: 320px;
+}
+
+.select-opcao-menor-0 {
+  padding: 2px;
+  width: 180px;
+  background-color: #ffff86;
+}
+
+.select-opcao-menor-1 {
+  padding: 2px;
+  width: 180px;
+  background-color: #86c8ff;
+}
+
+.select-opcao-menor-2 {
+  padding: 2px;
+  width: 180px;
+  background-color: #ff8686;
+}
+
+.select-opcao-menor-3 {
+  padding: 2px;
+  width: 180px;
+  background-color: #8aff86;
 }

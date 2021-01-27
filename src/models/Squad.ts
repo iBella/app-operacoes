@@ -1,29 +1,19 @@
-import { Membro } from "./Membro";
+import { ExecutionCheck } from "./ExecutionCheck";
+import { Collaborator } from "./Collaborator";
 
 export class Squad {
 
-    nome: String;
-    cliente: String;
-    equipe: Array<Membro>;
-    dataCriacao: Date;
+    id: String | undefined;
+    idTribe: String | undefined;
+    name: String;
+    collaborators: Array<Collaborator> = [];
+    executionChecks: Array<ExecutionCheck> = [];
+    smCompany!: Boolean;
+    poCompany!: Boolean;
+    beginDate: Date = new Date();
+    updateDate: Date | undefined;
 
-    constructor(nome:String, cliente:String, equipe:Array<Membro>, dataCriacao:Date){
-        this.nome = nome;
-        this.cliente = cliente;
-        this.equipe = equipe;
-        this.dataCriacao = dataCriacao;
-    }
-
-    adicionarMembroEquipe(membro:Membro)
-    {
-        this.equipe.push(membro);
-        return this.equipe;
-    }
-
-    removerMembroEquipe(membro:Membro)
-    {
-        var posicao = this.equipe.indexOf(membro);
-        this.equipe = this.equipe.splice(posicao, 1);
-        return this.equipe;
+    constructor(name:String){
+        this.name = name;
     }
 };
