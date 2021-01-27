@@ -10,11 +10,11 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import { MenuItem, Select } from '@material-ui/core';
 
-import { NotificationWarning } from '../../NotificationWarning';
+import { NotificationWarning } from './NotificationWarning';
 
-import { ActionType, ActionResponsability, ActionPriority, ActionStatus } from '../../../enums/enums'
+import { ActionType, ActionResponsability, ActionPriority, ActionStatus } from '../enums/enums'
 
-export const FormReview = (props) => {
+export const CardReview = (props) => {
     
     return (
         <Container>

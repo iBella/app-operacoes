@@ -2,18 +2,18 @@
   text-align: justify;
 }
 
-.alerta {
+.notification-warning {
   width: 100%;
   padding-top: 10px;
 }
 
-.btn-mais {
+.btn-plus {
   text-align: end;
   position: relative;
   margin-top: -1em;
 }
 
-.btn-mais-fim {
+.btn-plus-end {
   position: absolute;
   bottom: 50px;
   width: 100%;

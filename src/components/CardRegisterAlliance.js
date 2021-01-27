@@ -5,7 +5,7 @@ import Container from '@material-ui/core/Container';
 
 import { FormControl, TextField } from '@material-ui/core';
 
-export const FormRegister = (props) => {
+export const CardRegisterAlliance = (props) => {
 
     return (
         <Container>

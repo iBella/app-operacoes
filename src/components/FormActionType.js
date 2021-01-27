@@ -1,6 +1,6 @@
 import React from "react";
 import { InputLabel, FormControl, MenuItem, Select } from '@material-ui/core';
-import { ActionType } from "../../../enums/enums";
+import { ActionType } from "../enums/enums";
 
 export const FormActionType = (props) => {
 

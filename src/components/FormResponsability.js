@@ -1,6 +1,6 @@
 import React from "react";
 import { InputLabel, FormControl, MenuItem, Select } from '@material-ui/core';
-import { ActionResponsability } from "../../../enums/enums";
+import { ActionResponsability } from "../enums/enums";
 
 export const FormResponsability = (props) => {
 

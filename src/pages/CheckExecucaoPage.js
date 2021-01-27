@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
-import Fab from '@material-ui/core/Fab';
 import Step from '@material-ui/core/Step';
 import Stepper from '@material-ui/core/Stepper';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -14,12 +13,13 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import DoneIcon from '@material-ui/icons/Done';
 import AddIcon from '@material-ui/icons/Add';
 
-import { FormActionPoint } from '../components/executionCheck/actionPoint/FormActionPoint';
-import { FormRegister } from '../components/executionCheck/register/FormRegister';
-import { FormReview } from '../components/executionCheck/review/FormReview';
+import { ButtonPlus } from '../components/ButtonPlus';
+import { CardActionPoint } from '../components/CardActionPoint';
+import { CardRegisterExecutionCheck } from '../components/CardRegisterExecutionCheck';
+import { CardReview } from '../components/CardReview';
 
-import { setActionPoint } from '../functions/executionCheck/ActionPointFunction';
-import { setRegister } from '../functions/executionCheck/RegisterFunction';
+import { setActionPoint } from '../functions/SetActionPoint';
+import { setRegisterExecutionCheck } from '../functions/SetRegisterExecutionCheck';
 import { setSteper } from '../functions/SteperFunction';
 
 import { Squad } from '../models/Squad';
@@ -52,9 +52,13 @@ export const CheckExecucaoPage = () => {
     }
 
     const { handleBack, handleNext, handleReset } = setSteper(setActiveStep);
-    const onChangeSquadHandler = setRegister(setSquad);
+    const onChangeSquadHandler = setRegisterExecutionCheck(setSquad);
     const { onChangeActionTypeHandler, onChangeActionResponsabilitylHandler, onChangeActionPriorityHandler, onChangeActionDescriptionHandler } = 
       setActionPoint(setActionType, setActionResponsability, setActionPriority, setActionDescription, actionDescription);
+
+    const handleAdd = () => {
+      
+    };  
 
     return (
         <Container>
@@ -64,26 +68,22 @@ export const CheckExecucaoPage = () => {
                 <StepLabel>{label}</StepLabel>
                 <StepContent>
                     {index === 0 &&
-                      <FormRegister 
+                      <CardRegisterExecutionCheck 
                           squad={squad} squads={squads} onChangeSquadHandler={onChangeSquadHandler}>
-                      </FormRegister>
+                      </CardRegisterExecutionCheck>
                     }
                     {index === 1 &&
-                      <FormReview actionsReview={actionsReview} onChangeStatus={onChangeStatus} isValidRegister={isValidRegister}></FormReview>
+                      <CardReview actionsReview={actionsReview} onChangeStatus={onChangeStatus} isValidRegister={isValidRegister}></CardReview>
                     }
                     {index === 2 &&
                       <div>
-                        <FormActionPoint
+                        <CardActionPoint
                             actionType={actionType} onChangeActionTypeHandler={onChangeActionTypeHandler}
                             actionResponsability={actionResponsability} onChangeActionResponsabilitylHandler={onChangeActionResponsabilitylHandler}
                             actionPriority={actionPriority} onChangeActionPriorityHandler={onChangeActionPriorityHandler}
                             actionDescription={actionDescription} onChangeActionDescriptionHandler={onChangeActionDescriptionHandler}>
-                        </FormActionPoint>
-                        <div className="btn-mais">
-                          <Fab size="small" color="primary" aria-label="add">
-                            <AddIcon />
-                          </Fab>
-                        </div>
+                        </CardActionPoint>
+                        <ButtonPlus className="btn-plus" size="small" color="primary"  handleAdd={handleAdd}></ButtonPlus>
                       </div>
                     }
                     <IconButton disabled={activeStep === 0} onClick={handleBack} color="primary" component="span">

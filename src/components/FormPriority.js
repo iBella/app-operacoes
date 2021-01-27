@@ -1,6 +1,6 @@
 import React from "react";
 import { InputLabel, FormControl, MenuItem, Select } from '@material-ui/core';
-import { ActionPriority } from "../../../enums/enums";
+import { ActionPriority } from "../enums/enums";
 
 export const FormPriority = (props) => {
 

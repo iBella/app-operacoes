@@ -8,7 +8,7 @@ import { FormActionType } from "./FormActionType";
 import { FormResponsability } from "./FormResponsability";
 import { FormPriority } from "./FormPriority";
 
-export const FormActionPoint = (props) => {
+export const CardActionPoint = (props) => {
 
     return (
         <Container>

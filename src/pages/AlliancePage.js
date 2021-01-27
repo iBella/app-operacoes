@@ -4,15 +4,14 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Container from '@material-ui/core/Container';
-import Fab from '@material-ui/core/Fab';
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import AddIcon from '@material-ui/icons/Add';
 
-import { FormRegister } from '../components/alliance/FormRegister';
+import { ButtonPlus } from '../components/ButtonPlus';
+import { CardRegisterAlliance } from '../components/CardRegisterAlliance';
 
-import { Tribe } from '../models/Tribe';
 import { Alliance } from '../models/Alliance';
+import { Tribe } from '../models/Tribe';
 
 export const AlliancePage = () => {
 
@@ -37,7 +36,7 @@ export const AlliancePage = () => {
       <h3 className="frase-agil">Cultura só vai existir, se o seu time enxergar valor naquilo que ele vê.</h3>
       <hr></hr>
       { isValidRegister === true &&
-        <FormRegister allianceName={alliance.name} onChangeNameAllianceHandler={onChangeNameAllianceHandler}></FormRegister>
+        <CardRegisterAlliance allianceName={alliance.name} onChangeNameAllianceHandler={onChangeNameAllianceHandler}></CardRegisterAlliance>
       }
       {getTribos().map((tribo, index) => ( 
         <Accordion key={index} expanded={expanded === index} onChange={handleChange(index)}>
@@ -49,11 +48,7 @@ export const AlliancePage = () => {
           </AccordionDetails>
         </Accordion>
       ))}
-      <div className="btn-mais-fim">
-        <Fab size="small" color="primary" onClick={handleAdd}>
-          <AddIcon />
-        </Fab>
-      </div>
+      <ButtonPlus className="btn-plus-end" size="small" color="primary"  handleAdd={handleAdd}></ButtonPlus>
     </Container>
   );
 }

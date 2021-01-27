@@ -5,7 +5,7 @@ import Container from '@material-ui/core/Container';
 
 import { FormSquad } from "./FormSquad";
 
-export const FormRegister = (props) => {
+export const CardRegisterExecutionCheck = (props) => {
 
     return (
         <Container>
