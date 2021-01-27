@@ -7,7 +7,7 @@ export const FormActionType = (props) => {
     return (
         <FormControl>
             <InputLabel>Tipo</InputLabel>
-            <Select className="select-opcao" value={props.actionType} onChange={props.onChangeActionTypeHandler}>
+            <Select className="select-option" value={props.actionType} onChange={props.onChangeActionTypeHandler}>
                 <MenuItem key={ActionType.client} value={ActionType.client}>Cliente</MenuItem>
                 <MenuItem key={ActionType.infra} value={ActionType.infra}>Infra</MenuItem>
                 <MenuItem key={ActionType.po} value={ActionType.po}>PO</MenuItem>

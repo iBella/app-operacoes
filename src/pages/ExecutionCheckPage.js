@@ -27,7 +27,7 @@ import { ActionPoint } from '../models/ActionPoint';
 
 import { ActionPriority, ActionType, ActionResponsability, ActionStatus } from "../enums/enums";
 
-export const CheckExecucaoPage = () => {
+export const ExecutionCheckPage = () => {
 
     const [activeStep, setActiveStep] = useState(0);
     const steps = getSteps();

@@ -18,7 +18,7 @@ export const CardReview = (props) => {
     
     return (
         <Container>
-            <Card className="card-ce">
+            <Card className="card-register">
                 <TableContainer>
                     <Table size="small">
                         <TableHead>
@@ -40,7 +40,7 @@ export const CardReview = (props) => {
                                     <TableCell>{item.description}</TableCell>
                                     <TableCell align="center">{item.count}</TableCell>
                                     <TableCell align="center">
-                                        <Select className={"select-opcao-menor-"+item.status} id="status" value={item.status} onChange={(event) => props.onChangeStatus(props.actionsReview, index, event)}>
+                                        <Select className={"select-option-less-"+item.status} id="status" value={item.status} onChange={(event) => props.onChangeStatus(props.actionsReview, index, event)}>
                                             <MenuItem key={ActionStatus.inProgress} value={ActionStatus.inProgress}>Em Andamento</MenuItem>
                                             <MenuItem key={ActionStatus.repeated} value={ActionStatus.repeated}>Refazer</MenuItem>
                                             <MenuItem key={ActionStatus.canceled} value={ActionStatus.canceled}>Cancelado</MenuItem>

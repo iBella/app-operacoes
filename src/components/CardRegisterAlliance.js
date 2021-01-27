@@ -9,7 +9,7 @@ export const CardRegisterAlliance = (props) => {
 
     return (
         <Container>
-            <Card className="card-ce">
+            <Card className="card-register">
                 <FormControl className="form-text">
                     <TextField label="Nome" value={props.allianceName} onChange={props.onChangeNameAllianceHandler} multiline variant="outlined"/>
                 </FormControl>

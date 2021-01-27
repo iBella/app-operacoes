@@ -7,7 +7,7 @@ export const FormPriority = (props) => {
     return (
         <FormControl>
             <InputLabel>Prioridade</InputLabel>
-            <Select className="select-opcao" value={props.actionPriority} onChange={props.onChangeActionPriorityHandler}>
+            <Select className="select-option" value={props.actionPriority} onChange={props.onChangeActionPriorityHandler}>
                 <MenuItem key={ActionPriority.low} value={ActionPriority.low}>Baixa</MenuItem>
                 <MenuItem key={ActionPriority.normal} value={ActionPriority.normal}>Média</MenuItem>
                 <MenuItem key={ActionPriority.high} value={ActionPriority.high}>Alta</MenuItem>

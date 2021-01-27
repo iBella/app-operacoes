@@ -22,7 +22,7 @@
   margin-right: 50px;
 }
 
-.card-ce {
+.card-register {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
@@ -30,7 +30,7 @@
   padding: 20px;
 }
 
-.card-grafico {
+.card-chart {
   text-align: center;
   padding: 0px;
   width: 580px;
@@ -38,7 +38,7 @@
   margin-top: 20px;
 }
 
-.card-grafico-conteudo {
+.card-chart-content {
   text-align: center;
   width: 540px;
   height: 310px;
@@ -46,7 +46,7 @@
   margin: auto;
 }
 
-.card-valor {
+.card-content {
   text-align: center;
   font-size: 50px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -57,7 +57,7 @@
   margin-top: 20px;
 }
 
-.frase-agil {
+.text-agile {
   font-family: 'Courier New', Courier, monospace;
   font-style: italic;
   text-align: center;
@@ -69,37 +69,37 @@
   margin-top: 25px !important;
 }
 
-.painel {
+.panel {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px;
 }
 
-.select-opcao {
+.select-option {
   padding: 2px;
   width: 320px;
 }
 
-.select-opcao-menor-0 {
+.select-option-less-0 {
   padding: 2px;
   width: 180px;
   background-color: #ffff86;
 }
 
-.select-opcao-menor-1 {
+.select-option-less-1 {
   padding: 2px;
   width: 180px;
   background-color: #86c8ff;
 }
 
-.select-opcao-menor-2 {
+.select-option-less-2 {
   padding: 2px;
   width: 180px;
   background-color: #ff8686;
 }
 
-.select-opcao-menor-3 {
+.select-option-less-3 {
   padding: 2px;
   width: 180px;
   background-color: #8aff86;

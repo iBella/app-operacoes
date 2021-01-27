@@ -12,7 +12,7 @@ export const CardActionPoint = (props) => {
 
     return (
         <Container>
-            <Card className="card-ce">
+            <Card className="card-register">
                 <FormActionType actionType={props.actionType} onChangeActionTypeHandler={props.onChangeActionTypeHandler}></FormActionType>
                 <FormResponsability actionResponsability={props.actionResponsability} onChangeActionResponsabilitylHandler={props.onChangeActionResponsabilitylHandler}></FormResponsability>
                 <FormPriority actionPriority={props.actionPriority} onChangeActionPriorityHandler={props.onChangeActionPriorityHandler}></FormPriority>

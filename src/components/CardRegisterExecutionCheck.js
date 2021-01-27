@@ -9,7 +9,7 @@ export const CardRegisterExecutionCheck = (props) => {
 
     return (
         <Container>
-            <Card className="card-ce">
+            <Card className="card-register">
                 <FormSquad squad={props.squad} squads={props.squads} onChangeSquad={props.onChangeSquadHandler}></FormSquad>
             </Card>
         </Container>

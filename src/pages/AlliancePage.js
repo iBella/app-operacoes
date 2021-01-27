@@ -33,7 +33,7 @@ export const AlliancePage = () => {
 
   return (
     <Container>
-      <h3 className="frase-agil">Cultura só vai existir, se o seu time enxergar valor naquilo que ele vê.</h3>
+      <h3 className="text-agile">Cultura só vai existir, se o seu time enxergar valor naquilo que ele vê.</h3>
       <hr></hr>
       { isValidRegister === true &&
         <CardRegisterAlliance allianceName={alliance.name} onChangeNameAllianceHandler={onChangeNameAllianceHandler}></CardRegisterAlliance>

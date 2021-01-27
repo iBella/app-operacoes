@@ -11,30 +11,30 @@ export const PanelPage = () => {
     
     return (
         <Container>
-            <h3 className="frase-agil">Transparência, Inspeção e Adaptação</h3>
+            <h3 className="text-agile">Transparência, Inspeção e Adaptação</h3>
             <hr></hr>
-            <div className="painel">
-                <Card className="card-valor">
+            <div className="panel">
+                <Card className="card-content">
                     <CardHeader title="Tribos" />
                     <CardContent>
-                        <span className="card-valor">3</span>
+                        <span className="card-content">3</span>
                     </CardContent>
                 </Card>
-                <Card className="card-valor">
+                <Card className="card-content">
                     <CardHeader title="Squads" />
                     <CardContent>
-                        <span className="card-valor">13</span>
+                        <span className="card-content">13</span>
                     </CardContent>
                 </Card>
-                <Card className="card-valor">
+                <Card className="card-content">
                     <CardHeader title="Crafters" />
                     <CardContent>
-                        <span className="card-valor">87</span>
+                        <span className="card-content">87</span>
                     </CardContent>
                 </Card>
-                <Card className="card-grafico">
+                <Card className="card-chart">
                     <CardHeader title="Check de Execução" />
-                    <CardContent className="card-grafico-conteudo">
+                    <CardContent className="card-chart-content">
                         <VictoryChart polar theme={VictoryTheme.material} padding={0} height={400}>
                             <VictoryArea
                              style={{ data: { fill: "tomato"} }}
@@ -63,9 +63,9 @@ export const PanelPage = () => {
                         </VictoryChart>
                     </CardContent>
                 </Card>
-                <Card className="card-grafico">
+                <Card className="card-chart">
                     <CardHeader title="Quantidade de Ações por Responsabilidade" />
-                    <CardContent className="card-grafico-conteudo">
+                    <CardContent className="card-chart-content">
                         <VictoryPie
                             colorScale={["#8aff86", "#86c8ff", "#ffff86" ]}
                             labelRadius={60}
@@ -79,9 +79,9 @@ export const PanelPage = () => {
                         />
                     </CardContent>
                 </Card>
-                <Card className="card-grafico">
+                <Card className="card-chart">
                     <CardHeader title="Resultado CE" />
-                    <CardContent className="card-grafico-conteudo">
+                    <CardContent className="card-chart-content">
                         <VictoryChart>
                             <VictoryLegend x={25} y={0}
                                 centerTitle

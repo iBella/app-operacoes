@@ -8,7 +8,7 @@ import { TabPanel } from '../components/TabPanel';
 
 import { AlliancePage } from './AlliancePage';
 import { PanelPage } from './PanelPage';
-import { CheckExecucaoPage } from './CheckExecucaoPage';
+import { ExecutionCheckPage } from './ExecutionCheckPage';
 
 
 export const HomePage = () => {
@@ -23,7 +23,7 @@ export const HomePage = () => {
       <div >
         <AppBar position="static">
           <Tabs value={value} onChange={handleChange}>
-            <Tab label="Painel" />
+            <Tab label="panel" />
             <Tab label="Aliança" />
             <Tab label="Check Execução" />
           </Tabs>
@@ -35,7 +35,7 @@ export const HomePage = () => {
           <AlliancePage />
         </TabPanel>
         <TabPanel value={value} index={2}>
-          <CheckExecucaoPage />
+          <ExecutionCheckPage />
         </TabPanel>
       </div>
     );
