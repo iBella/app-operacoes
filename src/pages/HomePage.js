@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import intl from 'react-intl-universal';
 
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
@@ -23,9 +24,9 @@ export const HomePage = () => {
       <div >
         <AppBar position="static">
           <Tabs value={value} onChange={handleChange}>
-            <Tab label="panel" />
-            <Tab label="Aliança" />
-            <Tab label="Check Execução" />
+            <Tab label={intl.get("tab.label.panel")} />
+            <Tab label={intl.get("tab.label.alliance")}  />
+            <Tab label={intl.get("tab.label.executionCheck")}  />
           </Tabs>
         </AppBar>
         <TabPanel value={value} index={0}>

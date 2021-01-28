@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import intl from 'react-intl-universal';
 
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -9,6 +10,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import { ButtonPlus } from '../components/ButtonPlus';
 import { CardRegisterAlliance } from '../components/CardRegisterAlliance';
+import { TextAgile } from '../components/TextAgile';
 
 import { Alliance } from '../models/Alliance';
 import { Tribe } from '../models/Tribe';
@@ -33,8 +35,7 @@ export const AlliancePage = () => {
 
   return (
     <Container>
-      <h3 className="text-agile">Cultura só vai existir, se o seu time enxergar valor naquilo que ele vê.</h3>
-      <hr></hr>
+      <TextAgile phrase={intl.get("phrase.tips-1")}></TextAgile>
       { isValidRegister === true &&
         <CardRegisterAlliance allianceName={alliance.name} onChangeNameAllianceHandler={onChangeNameAllianceHandler}></CardRegisterAlliance>
       }

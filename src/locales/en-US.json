@@ -1,0 +1,72 @@
+{
+    "btn": {
+        "new-executionCheck": "New Execution Check"
+    },
+    "label": {
+        "count": "Count",
+        "description": "Description",
+        "name": "Name",
+        "squad": "Squad"
+    },
+    "notification": {
+        "status-inProgress" : "Warning: To proceed to the next step, no status can be set to 'In Progress'."
+    },
+    "phrase": {
+        "tips-1": "Culture will only exist if your team sees value in what they see.",
+        "tips-2": "Transparency, Inspection and Adaptation."
+    },
+    "select-enums": {
+        "roleCollaborator": {
+            "developer": "Developer",
+            "dl": "DL",
+            "architect": "Architect",
+            "po": "PO",
+            "sm": "SM"
+        },
+        "actionPriority": {
+            "low": "Low",
+            "normal": "Normal",
+            "high": "High",
+            "veryHigh": "Very High"
+        },
+        "actionResponsability": {
+            "company": "Company",
+            "squad": "Squad",
+            "client": "Client"
+        },
+        "actionStatus": {
+            "inProgress": "In Progress",
+            "repeated": "Repeat",
+            "canceled": "Cancel",
+            "completed": "Complete"
+        },
+        "actionType": {
+            "infra": "Infra",
+            "po": "PO",
+            "sm": "SM",
+            "rite": "Rite",
+            "squad": "Squad",
+            "client": "Client"
+        },
+        "label": {
+            "roleCollaborator": "Role",
+            "actionPriority": "Priority",
+            "actionResponsability": "Responsability",
+            "actionStatus": "Status",
+            "actionType": "Type"
+        }
+    },
+    "step": {
+        "register": "Register",
+        "review": "Review",
+        "actionPlan": "Action Plans",
+        "finalize": "Finalize"
+    },
+    "tab": {
+        "label": {
+            "panel": "Panel",
+            "alliance": "Alliance",
+            "executionCheck": "Execution Check"
+        }
+    }
+}

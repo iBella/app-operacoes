@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import intl from 'react-intl-universal';
 
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
@@ -30,7 +31,7 @@ import { ActionPriority, ActionType, ActionResponsability, ActionStatus } from "
 export const ExecutionCheckPage = () => {
 
     const [activeStep, setActiveStep] = useState(0);
-    const steps = getSteps();
+    const steps = getSteps(intl.get("step.register"), intl.get("step.review"), intl.get("step.actionPlan"), intl.get("step.finalize"));
 
     const [actionType, setActionType] = useState(4);
     const [actionResponsability, setActionResponsability] = useState(0);
@@ -98,15 +99,15 @@ export const ExecutionCheckPage = () => {
           </Stepper>
           {activeStep === steps.length && (
             <Button onClick={handleReset} variant="outlined" color="primary">
-               <AddIcon /> Iniciar novo Check de Execução
+               <AddIcon /> {intl.get("btn.new-executionCheck")}
             </Button>
           )}
         </Container>
     );
 };
 
-function getSteps() {
-  return ['Cadastrar', 'Revisar', 'Plano de Ação', 'Finalizar'];
+function getSteps(register, review, actionPlan, finalize) {
+  return [register, review, actionPlan, finalize];
 }
 
 function getSquads() {

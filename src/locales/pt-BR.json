@@ -1,0 +1,72 @@
+{
+    "btn": {
+        "new-executionCheck": "Novo Check de Execução"
+    },
+    "label": {
+        "count": "Ocorrência",
+        "description": "Descrição",
+        "name": "Nome",
+        "squad": "Squad"
+    },
+    "notification": {
+        "status-inProgress": "Aviso: Para avançar para a próxima etapa nenhum status pode estar como 'Em Andamento'."
+    },
+    "phrase": {
+        "tips-1": "Cultura só vai existir, se o seu time enxergar valor naquilo que ele vê.",
+        "tips-2": "Transparência, Inspeção e Adaptação."
+    },
+    "select-enums": {
+        "roleCollaborator": {
+            "developer": "Desenvolvedor",
+            "dl": "DL",
+            "architect": "Arquiteto",
+            "po": "PO",
+            "sm": "SM"
+        },
+        "actionPriority": {
+            "low": "baixa",
+            "normal": "média",
+            "high": "alta",
+            "veryHigh": "muito alta"
+        },
+        "actionResponsability": {
+            "company": "Empresa",
+            "squad": "Squad",
+            "client": "Cliente"
+        },
+        "actionStatus": {
+            "inProgress": "Em Andamento",
+            "repeated": "Repetir",
+            "canceled": "Cancelar",
+            "completed": "Completar"
+        },
+        "actionType": {
+            "infra": "Infra",
+            "po": "PO",
+            "sm": "SM",
+            "rite": "Rito",
+            "squad": "Squad",
+            "client": "Cliente"
+        },
+        "label": {
+            "roleCollaborator": "Função",
+            "actionPriority": "Prioridade",
+            "actionResponsability": "Responsabilidade",
+            "actionStatus": "Status",
+            "actionType": "Tipo"
+        }
+    },
+    "step": {
+        "register": "Registrar",
+        "review": "Revisar",
+        "actionPlan": "Plano de Ação",
+        "finalize": "Finalizar"
+    },
+    "tab": {
+        "label": {
+            "panel": "Painel",
+            "alliance": "Aliança",
+            "executionCheck": "Check de Execução"
+        }
+    }
+}

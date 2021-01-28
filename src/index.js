@@ -4,7 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
 
 import reportWebVitals from './reportWebVitals';
-import './index.css';
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
@@ -15,6 +14,8 @@ import App from "./App";
 import { persistStore, persistReducer } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 
+import intl from 'react-intl-universal';
+
 const persistConfig = {
     key: "operacaoRoot",
     storage
@@ -23,6 +24,24 @@ const persistentedReducer = persistReducer(persistConfig, reducers);
 const store = createStore(persistentedReducer);
 const persistor = persistStore(store);
 const rootElement = document.getElementById("root");
+
+const locales = {
+    'pt-BR': require('./locales/pt-BR.json'),
+    'en': require('./locales/en-US.json'),
+    'en-AU': require('./locales/en-US.json'),
+    'en-CA': require('./locales/en-US.json'),
+    'en-GB': require('./locales/en-US.json'),
+    'en-IN': require('./locales/en-US.json'),
+    'en-NZ': require('./locales/en-US.json'),
+    'en-US': require('./locales/en-US.json'),
+    'en-ZA': require('./locales/en-US.json')
+};
+
+const currentLocale = locales[navigator.language] ? navigator.language : 'pt-BR';
+
+console.log(navigator.language);
+
+intl.init({ currentLocale, locales });
 
 ReactDOM.render(
     <Provider store={store}>

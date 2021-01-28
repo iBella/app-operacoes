@@ -1,4 +1,5 @@
 import React from "react";
+import intl from 'react-intl-universal';
 
 import Card from '@material-ui/core/Card';
 import Container from '@material-ui/core/Container';
@@ -23,28 +24,28 @@ export const CardReview = (props) => {
                     <Table size="small">
                         <TableHead>
                             <TableRow>
-                                <TableCell align="center">Tipo</TableCell>
-                                <TableCell align="center">Responsável</TableCell>
-                                <TableCell align="center">Prioridade</TableCell>
-                                <TableCell>Descrição</TableCell>
-                                <TableCell align="center">Ocorrência</TableCell>
-                                <TableCell align="center">Status</TableCell>
+                                <TableCell align="center">{intl.get("select-enums.label.actionType")}</TableCell>
+                                <TableCell align="center">{intl.get("select-enums.label.actionResponsability")}</TableCell>
+                                <TableCell align="center">{intl.get("select-enums.label.actionPriority")}</TableCell>
+                                <TableCell>{intl.get("label.description")}</TableCell>
+                                <TableCell align="center">{intl.get("label.count")}</TableCell>
+                                <TableCell align="center">{intl.get("select-enums.label.actionStatus")}</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
                             {props.actionsReview.map((item, index) => (
                                 <TableRow key={index}>
-                                    <TableCell align="center">{ActionType[item.actionType]}</TableCell>
-                                    <TableCell align="center">{ActionResponsability[item.responsability]}</TableCell>
-                                    <TableCell align="center">{ActionPriority[item.priority]}</TableCell>
+                                    <TableCell align="center">{intl.get(`select-enums.actionType.${ActionType[item.actionType]}`)}</TableCell>
+                                    <TableCell align="center">{intl.get(`select-enums.actionResponsability.${ActionResponsability[item.responsability]}`)}</TableCell>
+                                    <TableCell align="center">{intl.get(`select-enums.actionPriority.${ActionPriority[item.priority]}`)}</TableCell>
                                     <TableCell>{item.description}</TableCell>
                                     <TableCell align="center">{item.count}</TableCell>
                                     <TableCell align="center">
-                                        <Select className={"select-option-less-"+item.status} id="status" value={item.status} onChange={(event) => props.onChangeStatus(props.actionsReview, index, event)}>
-                                            <MenuItem key={ActionStatus.inProgress} value={ActionStatus.inProgress}>Em Andamento</MenuItem>
-                                            <MenuItem key={ActionStatus.repeated} value={ActionStatus.repeated}>Refazer</MenuItem>
-                                            <MenuItem key={ActionStatus.canceled} value={ActionStatus.canceled}>Cancelado</MenuItem>
-                                            <MenuItem key={ActionStatus.completed} value={ActionStatus.completed}>Completo</MenuItem>
+                                        <Select className={`select-option-less-${item.status}`} value={item.status} onChange={(event) => props.onChangeStatus(props.actionsReview, index, event)}>
+                                            <MenuItem key={ActionStatus.inProgress} value={ActionStatus.inProgress} disabled="true">{intl.get("select-enums.actionStatus.inProgress")}</MenuItem>
+                                            <MenuItem key={ActionStatus.repeated} value={ActionStatus.repeated}>{intl.get("select-enums.actionStatus.repeated")}</MenuItem>
+                                            <MenuItem key={ActionStatus.canceled} value={ActionStatus.canceled}>{intl.get("select-enums.actionStatus.canceled")}</MenuItem>
+                                            <MenuItem key={ActionStatus.completed} value={ActionStatus.completed}>{intl.get("select-enums.actionStatus.completed")}</MenuItem>
                                         </Select>
                                     </TableCell>
                                 </TableRow>
@@ -52,7 +53,7 @@ export const CardReview = (props) => {
                         </TableBody>
                     </Table>
                 </TableContainer>
-                <NotificationWarning isValid={props.isValidRegister} message="Aviso: Enquanto houver status 'Em Andamento' não é possível passar para próxima etapa."></NotificationWarning>
+                <NotificationWarning isValid={props.isValidRegister} message={intl.get("notification.status-inProgress")}></NotificationWarning>
             </Card>
         </Container>
     );

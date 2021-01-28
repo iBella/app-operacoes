@@ -1,4 +1,5 @@
 import React from "react";
+import intl from 'react-intl-universal';
 
 import { VictoryPie, VictoryChart, VictoryArea, VictoryTheme, VictoryPolarAxis, VictoryGroup, VictoryBar, VictoryLegend } from "victory";
 
@@ -7,12 +8,13 @@ import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import Container from '@material-ui/core/Container';
 
+import { TextAgile } from '../components/TextAgile';
+
 export const PanelPage = () => {
     
     return (
         <Container>
-            <h3 className="text-agile">Transparência, Inspeção e Adaptação</h3>
-            <hr></hr>
+            <TextAgile phrase={intl.get("phrase.tips-2")}></TextAgile>
             <div className="panel">
                 <Card className="card-content">
                     <CardHeader title="Tribos" />
