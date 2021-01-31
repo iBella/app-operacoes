@@ -12,8 +12,7 @@ import { ButtonPlus } from '../components/ButtonPlus';
 import { CardRegisterAlliance } from '../components/CardRegisterAlliance';
 import { TextAgile } from '../components/TextAgile';
 
-import { Alliance } from '../models/Alliance';
-import { Tribe } from '../models/Tribe';
+import { Alliance, Tribe } from '../models';
 
 export const AlliancePage = () => {
 

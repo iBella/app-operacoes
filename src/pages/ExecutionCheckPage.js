@@ -1,18 +1,9 @@
 import React, { useState } from "react";
 import intl from 'react-intl-universal';
 
-import Button from '@material-ui/core/Button';
-import Container from '@material-ui/core/Container';
-import Step from '@material-ui/core/Step';
-import Stepper from '@material-ui/core/Stepper';
-import StepLabel from '@material-ui/core/StepLabel';
-import StepContent from '@material-ui/core/StepContent';
+import { Button, Container, Step, Stepper, StepLabel, StepContent, IconButton } from '@material-ui/core';
 
-import IconButton from '@material-ui/core/IconButton';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import DoneIcon from '@material-ui/icons/Done';
-import AddIcon from '@material-ui/icons/Add';
+import { ExpandLess, ExpandMore, Done, Add } from '@material-ui/icons';
 
 import { ButtonPlus } from '../components/ButtonPlus';
 import { CardActionPoint } from '../components/CardActionPoint';
@@ -23,8 +14,7 @@ import { setActionPoint } from '../functions/SetActionPoint';
 import { setRegisterExecutionCheck } from '../functions/SetRegisterExecutionCheck';
 import { setSteper } from '../functions/SteperFunction';
 
-import { Squad } from '../models/Squad';
-import { ActionPoint } from '../models/ActionPoint';
+import { Squad, ActionPoint } from '../models';
 
 import { ActionPriority, ActionType, ActionResponsability, ActionStatus } from "../enums/enums";
 
@@ -88,10 +78,10 @@ export const ExecutionCheckPage = () => {
                       </div>
                     }
                     <IconButton disabled={activeStep === 0} onClick={handleBack} color="primary" component="span">
-                      <ExpandLessIcon />
+                      <ExpandLess />
                     </IconButton>
                     <IconButton onClick={handleNext} disabled={index === 1 && isValidRegister} color="primary" component="span">
-                      {activeStep === steps.length - 1 ? <DoneIcon /> : <ExpandMoreIcon />}
+                      {activeStep === steps.length - 1 ? <Done /> : <ExpandMore />}
                     </IconButton>
                 </StepContent>
               </Step>
@@ -99,7 +89,7 @@ export const ExecutionCheckPage = () => {
           </Stepper>
           {activeStep === steps.length && (
             <Button onClick={handleReset} variant="outlined" color="primary">
-               <AddIcon /> {intl.get("btn.new-executionCheck")}
+               <Add /> {intl.get("btn.new-executionCheck")}
             </Button>
           )}
         </Container>
